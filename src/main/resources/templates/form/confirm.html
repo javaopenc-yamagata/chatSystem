@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h2 th:text="${message}"></h2>
+	<div th:object="${index}">
+		<p>入力内容＞＞＞</p>
+		<p th:text="${chat.name}"></p>
+		<p th:text="${chat.comment}"></p>
+	</div>
+</body>
+
+</html>
