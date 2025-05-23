@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+h1{
+	color: blue
+}
+
+
+table{
+  border-spacing:   30px;
+}
+
+*list{
+	.speech-bubble {
+	        position: relative;
+	        padding: 10px;
+	        border-radius: 5px; /* 角を丸める */
+	        background-color: #f0f0f0;
+	    }
+}

@@ -4,17 +4,42 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
+
+	<style>
+		table {
+			border-spacing: px;
+		}
+
+		td {
+
+			padding: 50px;
+
+		}
+	</style>
+
 </head>
 
 <body>
-	<h1>【Chat】</h1>
-	<div>
-		<p>＞入力内容はこちらへ</p>
-		<form method="get" action="#" th:action="@{/}">
-			<p>名前：<input type="text" name=name></p>
-			<p>コメント：<input type="text" name=comment></p>
-			<input type="submit" value="投稿">
-	</div>
+	<h1 th:text="${message}"></h1>
+
+	<form method="get" action="#" th:action="@{/complete}" th:object="${chat}">
+		<input type="text" name="name" placeholder="お名前">
+		：<input type="text" name="comment" placeholder="コメント：５００文字まで。Enterキーでも投稿できます。" size="50">
+		<input type="submit" value="投稿">
+		</p>
+	</form>
+	<hr>
+	<table>
+		<tr>
+			<th></th>
+			<th></th>
+		</tr>
+		<tr id="list" th:each="res : ${dbList}">
+			<td th:text="${res.name}"></td>
+			<td th:text="${res.comment}"></td>
+		</tr>
+	</table>
+
 
 </body>
 
